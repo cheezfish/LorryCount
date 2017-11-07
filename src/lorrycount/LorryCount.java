@@ -18,7 +18,7 @@ public class LorryCount
     
     public static void end(double Pc)
     {
-        System.out.println("Lorries were " + Pc + "%" + "of all vehicles this session");
+        System.out.println("Lorries were " + Pc + "%" + " of all vehicles this session");
     }
     
     public static double LorryNum() 
@@ -29,7 +29,7 @@ public class LorryCount
         
         while (!input.equalsIgnoreCase("CLOSE")) 
         {
-            input = input("What kind of vehicle passed?");
+            input = input("What kind of vehicle passed? Or type CLOSE to end program");
                             if ("Lorry".equalsIgnoreCase(input)) //accounts for input "lorry"
                             {
                                 LorryNum = ++LorryNum; //adds one to LorryNum
