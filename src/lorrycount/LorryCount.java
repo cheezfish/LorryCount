@@ -14,9 +14,11 @@ public class LorryCount
         
         numbers();
         System.exit(0);
+        
     }
     
-    public static String input(String variable) {
+    public static String input(String variable) 
+    {
         
          Scanner scan = new Scanner(System.in); //takes input
          System.out.println(variable);
