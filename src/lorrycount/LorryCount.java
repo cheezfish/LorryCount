@@ -12,16 +12,18 @@ public class LorryCount
     public static void main(String args[])
     {
         
-        end(LorryNum()); //runs the only important method 
+        numbers();
+        System.exit(0);
+    }
+    
+    public static String input(String variable) {
         
+         Scanner scan = new Scanner(System.in); //takes input
+         System.out.println(variable);
+         return scan.nextLine();
     }
-    
-    public static void end(double Pc)
-    {
-        System.out.println("Lorries were " + Pc + "%" + " of all vehicles this session");
-    }
-    
-    public static double LorryNum() 
+   
+    public static void numbers() 
     {
         int OtherNum = 0; //declaration and initialisation of my two main variables
         String input = "";
@@ -43,24 +45,18 @@ public class LorryCount
                             }
         }
         
-        return percentage(LorryNum,OtherNum); //returns percentage, calling LorryNum and OtherNum to create Pc
+        output(LorryNum,OtherNum); //call percentage method, return value created by percentage method
     }
     
-    public static String input(String variable) {
-        
-         Scanner scan = new Scanner(System.in); //takes input
-         System.out.println(variable);
-         return scan.nextLine();
-    }
-    
-    public static double percentage(int LorryNum, int OtherNum) 
+    public static void output(int LorryNum, int OtherNum) 
     {
         
         System.out.println("You saw " + LorryNum + " Lorries");
         double Both = LorryNum + OtherNum;
         double Pcdouble = LorryNum / Both;
         double Pc = Pcdouble * 100;
-        return Math.round(Pc); //creates percentage variable "Pc" based on LorryNum and OtherNum
+        Pc = Math.round(Pc); //creates percentage variable "Pc" based on LorryNum and OtherNum
+        System.out.println("Lorries were " + Pc + "%" + " of all vehicles this session");
     }
     
 }
